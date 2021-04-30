@@ -69,20 +69,7 @@ public class InicioSesion extends HttpServlet {
             if (Mensaje.equals("Datos_Incorrectos")) {
                 response.sendRedirect("IniciarS.jsp");
             } else {
-                String[] words = Mensaje.split(";");
-
-                String Datitos = words[0];
-                String FORO1 = words[1];
-                String FORO2 = words[2];
-                String FORO3 = words[3];
-
-                String[] USERD = Datitos.split(",");
-
-                String IDU = USERD[0];
-                String NAMEU = USERD[1];
-                String PASSU = USERD[2];
-                String INSTU = USERD[3];
-                String EMAILU = USERD[4];
+                // Obtener Información
 
                 HttpSession objsesion = request.getSession();
                 objsesion.setAttribute("NAMEU", NAMEU);
